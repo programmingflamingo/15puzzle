@@ -1,4 +1,4 @@
-package ms11Proj2;
+package puzzle;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -66,8 +66,8 @@ public class UnitTest extends Puzzle  {
     @Test //even inversion count
     public void testThree() {    	
     	ButtonShuffle object1 = new ButtonShuffle();
-    	bShuffle.addActionListener(object1);
-    	bShuffle.doClick();
+    	btnShuffle.addActionListener(object1);
+    	btnShuffle.doClick();
     	
     	assertEquals(0,object1.getInversionCount()%2);	
     }
@@ -78,17 +78,17 @@ public class UnitTest extends Puzzle  {
     
     	int i;
     	for(i=0;i<16;i++)
-    		bNumsInGrid[i].addActionListener(object1);
+    	  btnNumsInGrid[i].addActionListener(object1);
     	
-    	bNumsInGrid[0].doClick();
-    	assertEquals(bNumsInGrid[0].getText(), "1");
+    	btnNumsInGrid[0].doClick();
+    	assertEquals(btnNumsInGrid[0].getText(), "1");
     	
-    	bNumsInGrid[15].doClick();
-    	assertEquals(bNumsInGrid[15].getText(), "");
+    	btnNumsInGrid[15].doClick();
+    	assertEquals(btnNumsInGrid[15].getText(), "");
     	
-    	bNumsInGrid[14].doClick();
-    	assertEquals(bNumsInGrid[14].getText(), "");
-    	assertEquals(bNumsInGrid[15].getText(), "15");
+    	btnNumsInGrid[14].doClick();
+    	assertEquals(btnNumsInGrid[14].getText(), "");
+    	assertEquals(btnNumsInGrid[15].getText(), "15");
     }
     
     @Test //double click / everything is in correct spot
@@ -97,42 +97,42 @@ public class UnitTest extends Puzzle  {
         
     	int i;
     	for(i=0;i<16;i++)
-    		bNumsInGrid[i].addActionListener(object1);
+    	  btnNumsInGrid[i].addActionListener(object1);
     	
-    	assertEquals("1", bNumsInGrid[0].getText());
-    	assertEquals("2", bNumsInGrid[1].getText());
-    	assertEquals("3", bNumsInGrid[2].getText());
-    	assertEquals("4", bNumsInGrid[3].getText());
-    	assertEquals("5", bNumsInGrid[4].getText());
-    	assertEquals("6", bNumsInGrid[5].getText());
-    	assertEquals("7", bNumsInGrid[6].getText());
-    	assertEquals("8", bNumsInGrid[7].getText());
-    	assertEquals("9", bNumsInGrid[8].getText());
-    	assertEquals("10", bNumsInGrid[9].getText());
-    	assertEquals("11", bNumsInGrid[10].getText());
-    	assertEquals("12", bNumsInGrid[11].getText());
-    	assertEquals("13", bNumsInGrid[12].getText());
-    	assertEquals("14", bNumsInGrid[13].getText());
-    	assertEquals("15", bNumsInGrid[14].getText());
-    	assertEquals("", bNumsInGrid[15].getText());
+    	assertEquals("1", btnNumsInGrid[0].getText());
+    	assertEquals("2", btnNumsInGrid[1].getText());
+    	assertEquals("3", btnNumsInGrid[2].getText());
+    	assertEquals("4", btnNumsInGrid[3].getText());
+    	assertEquals("5", btnNumsInGrid[4].getText());
+    	assertEquals("6", btnNumsInGrid[5].getText());
+    	assertEquals("7", btnNumsInGrid[6].getText());
+    	assertEquals("8", btnNumsInGrid[7].getText());
+    	assertEquals("9", btnNumsInGrid[8].getText());
+    	assertEquals("10", btnNumsInGrid[9].getText());
+    	assertEquals("11", btnNumsInGrid[10].getText());
+    	assertEquals("12", btnNumsInGrid[11].getText());
+    	assertEquals("13", btnNumsInGrid[12].getText());
+    	assertEquals("14", btnNumsInGrid[13].getText());
+    	assertEquals("15", btnNumsInGrid[14].getText());
+    	assertEquals("", btnNumsInGrid[15].getText());
     	
-    	bNumsInGrid[14].doClick();
-    	assertEquals("", bNumsInGrid[14].getText());
-    	assertEquals("15", bNumsInGrid[15].getText());
+    	btnNumsInGrid[14].doClick();
+    	assertEquals("", btnNumsInGrid[14].getText());
+    	assertEquals("15", btnNumsInGrid[15].getText());
     	
-    	bNumsInGrid[14].doClick();
-    	assertEquals("", bNumsInGrid[14].getText());
+    	btnNumsInGrid[14].doClick();
+    	assertEquals("", btnNumsInGrid[14].getText());
     	
-    	bNumsInGrid[15].doClick();
-    	assertEquals("15", bNumsInGrid[14].getText());
-    	assertEquals("", bNumsInGrid[15].getText());
+    	btnNumsInGrid[15].doClick();
+    	assertEquals("15", btnNumsInGrid[14].getText());
+    	assertEquals("", btnNumsInGrid[15].getText());
     	
-    	bNumsInGrid[15].doClick();
-    	assertEquals("", bNumsInGrid[15].getText());
+    	btnNumsInGrid[15].doClick();
+    	assertEquals("", btnNumsInGrid[15].getText());
     	
-    	bNumsInGrid[11].doClick();
-    	assertEquals("", bNumsInGrid[11].getText());
-    	assertEquals("12", bNumsInGrid[15].getText());
+    	btnNumsInGrid[11].doClick();
+    	assertEquals("", btnNumsInGrid[11].getText());
+    	assertEquals("12", btnNumsInGrid[15].getText());
     }
     
     @Test// double click // movestack is correct
@@ -141,16 +141,16 @@ public class UnitTest extends Puzzle  {
         
     	int i;
     	for(i=0;i<16;i++)
-    		bNumsInGrid[i].addActionListener(object1);
+    	  btnNumsInGrid[i].addActionListener(object1);
     	
-    	bNumsInGrid[14].doClick();
-    	bNumsInGrid[14].doClick();
+    	btnNumsInGrid[14].doClick();
+    	btnNumsInGrid[14].doClick();
     	
-    	bNumsInGrid[15].doClick();
-    	bNumsInGrid[15].doClick();
+    	btnNumsInGrid[15].doClick();
+    	btnNumsInGrid[15].doClick();
     	
-    	bNumsInGrid[11].doClick();
-    	bNumsInGrid[11].doClick();
+    	btnNumsInGrid[11].doClick();
+    	btnNumsInGrid[11].doClick();
     	
     	assertEquals(3, moveStack.size());
     }
@@ -159,30 +159,30 @@ public class UnitTest extends Puzzle  {
     public void testSeven() throws InterruptedException {
         Puzzle p = new Puzzle();
         
-    	p.bNumsInGrid[14].doClick();
-    	p.bNumsInGrid[14].doClick();
+    	p.btnNumsInGrid[14].doClick();
+    	p.btnNumsInGrid[14].doClick();
     	
-    	p.bNumsInGrid[10].doClick();
-    	p.bNumsInGrid[10].doClick();
+    	p.btnNumsInGrid[10].doClick();
+    	p.btnNumsInGrid[10].doClick();
     	
-    	p.bNumsInGrid[11].doClick();
-    	p.bNumsInGrid[11].doClick();
+    	p.btnNumsInGrid[11].doClick();
+    	p.btnNumsInGrid[11].doClick();
     	
-    	assertEquals("12", p.bNumsInGrid[10].getText());
-    	assertEquals("", p.bNumsInGrid[11].getText());
-    	assertEquals("11", p.bNumsInGrid[14].getText());
-    	assertEquals("15", p.bNumsInGrid[15].getText());
+    	assertEquals("12", p.btnNumsInGrid[10].getText());
+    	assertEquals("", p.btnNumsInGrid[11].getText());
+    	assertEquals("11", p.btnNumsInGrid[14].getText());
+    	assertEquals("15", p.btnNumsInGrid[15].getText());
     	
     	assertEquals(3, p.moveStack.size());
     	
-    	p.bUndo.doClick();
+    	p.btnUndo.doClick();
     	
     	Thread.sleep(2000);
     	
-    	assertEquals("", p.bNumsInGrid[10].getText());
-    	assertEquals("12", p.bNumsInGrid[11].getText());
-    	assertEquals("11", p.bNumsInGrid[14].getText());
-    	assertEquals("15", p.bNumsInGrid[15].getText());
+    	assertEquals("", p.btnNumsInGrid[10].getText());
+    	assertEquals("12", p.btnNumsInGrid[11].getText());
+    	assertEquals("11", p.btnNumsInGrid[14].getText());
+    	assertEquals("15", p.btnNumsInGrid[15].getText());
     	
     	assertEquals(2, p.moveStack.size());
     }
@@ -191,32 +191,32 @@ public class UnitTest extends Puzzle  {
     public void testEight() throws InterruptedException {
         Puzzle p = new Puzzle();
     	
-    	p.bNumsInGrid[14].doClick();
-    	p.bNumsInGrid[14].doClick();
+    	p.btnNumsInGrid[14].doClick();
+    	p.btnNumsInGrid[14].doClick();
     	
-    	p.bNumsInGrid[10].doClick();
-    	p.bNumsInGrid[10].doClick();
+    	p.btnNumsInGrid[10].doClick();
+    	p.btnNumsInGrid[10].doClick();
     	
-    	p.bNumsInGrid[11].doClick();
-    	p.bNumsInGrid[11].doClick();
+    	p.btnNumsInGrid[11].doClick();
+    	p.btnNumsInGrid[11].doClick();
     	
-    	assertEquals("12", p.bNumsInGrid[10].getText());
-    	assertEquals("", p.bNumsInGrid[11].getText());
-    	assertEquals("11", p.bNumsInGrid[14].getText());
-    	assertEquals("15", p.bNumsInGrid[15].getText());
+    	assertEquals("12", p.btnNumsInGrid[10].getText());
+    	assertEquals("", p.btnNumsInGrid[11].getText());
+    	assertEquals("11", p.btnNumsInGrid[14].getText());
+    	assertEquals("15", p.btnNumsInGrid[15].getText());
     	
     	assertEquals(3, p.moveStack.size());
     	
-    	p.bUndoAll.doClick();
+    	p.btnUndoAll.doClick();
     	
     	Thread.sleep(5000);
     	    	
     	assertEquals(0, p.moveStack.size());
     	
-    	assertEquals("11", p.bNumsInGrid[10].getText());
-    	assertEquals("12", p.bNumsInGrid[11].getText());
-    	assertEquals("15", p.bNumsInGrid[14].getText());
-    	assertEquals("", p.bNumsInGrid[15].getText());
+    	assertEquals("11", p.btnNumsInGrid[10].getText());
+    	assertEquals("12", p.btnNumsInGrid[11].getText());
+    	assertEquals("15", p.btnNumsInGrid[14].getText());
+    	assertEquals("", p.btnNumsInGrid[15].getText());
     	
     	assertEquals(0, p.moveStack.size());
     }
@@ -225,22 +225,22 @@ public class UnitTest extends Puzzle  {
     public void testNine() throws InterruptedException {
         Puzzle p = new Puzzle();
         
-    	p.bNumsInGrid[14].doClick();
-    	p.bNumsInGrid[14].doClick();
-    	p.bNumsInGrid[13].doClick();
-    	p.bNumsInGrid[12].doClick();
-    	p.bNumsInGrid[8].doClick();
+    	p.btnNumsInGrid[14].doClick();
+    	p.btnNumsInGrid[14].doClick();
+    	p.btnNumsInGrid[13].doClick();
+    	p.btnNumsInGrid[12].doClick();
+    	p.btnNumsInGrid[8].doClick();
     	
-    	assertEquals("", p.bNumsInGrid[8].getText());
+    	assertEquals("", p.btnNumsInGrid[8].getText());
     	
-    	p.bAutoSolve.doClick();
+    	p.btnAutoSolve.doClick();
     	
     	Thread.sleep(5000);
     	
-    	assertEquals("11", p.bNumsInGrid[10].getText());
-    	assertEquals("12", p.bNumsInGrid[11].getText());
-    	assertEquals("15", p.bNumsInGrid[14].getText());
-    	assertEquals("", p.bNumsInGrid[15].getText());
+    	assertEquals("11", p.btnNumsInGrid[10].getText());
+    	assertEquals("12", p.btnNumsInGrid[11].getText());
+    	assertEquals("15", p.btnNumsInGrid[14].getText());
+    	assertEquals("", p.btnNumsInGrid[15].getText());
     }
     
     @Test// checks if isCorrect is checking for correct vector
@@ -261,17 +261,17 @@ public class UnitTest extends Puzzle  {
     public void testEleven() {
     	ButtonAutoSolve object1 = new ButtonAutoSolve();
         Puzzle p = new Puzzle();
-        int b = object1.getBlank(p.bNumsInGrid);
+        int b = object1.getBlank(p.btnNumsInGrid);
         
     	assertEquals (15, b);
         
-    	p.bNumsInGrid[14].doClick();
-    	p.bNumsInGrid[14].doClick();
-    	p.bNumsInGrid[13].doClick();
-    	p.bNumsInGrid[12].doClick();
-    	p.bNumsInGrid[8].doClick();
+    	p.btnNumsInGrid[14].doClick();
+    	p.btnNumsInGrid[14].doClick();
+    	p.btnNumsInGrid[13].doClick();
+    	p.btnNumsInGrid[12].doClick();
+    	p.btnNumsInGrid[8].doClick();
     	
-        b = object1.getBlank(p.bNumsInGrid);
+        b = object1.getBlank(p.btnNumsInGrid);
         
     	assertEquals (8, b);
     }
@@ -280,7 +280,7 @@ public class UnitTest extends Puzzle  {
     public void testTwelve() {
     	ButtonAutoSolve object1 = new ButtonAutoSolve();
         Puzzle p = new Puzzle();
-        int b = object1.getBlank(p.bNumsInGrid);
+        int b = object1.getBlank(p.btnNumsInGrid);
         
     	assertEquals (15, b);
         
@@ -293,13 +293,13 @@ public class UnitTest extends Puzzle  {
     	
     	assertEquals(expected, result);
     	
-    	p.bNumsInGrid[14].doClick();
-    	p.bNumsInGrid[14].doClick();
-    	p.bNumsInGrid[13].doClick();
-    	p.bNumsInGrid[12].doClick();
-    	p.bNumsInGrid[8].doClick();
+    	p.btnNumsInGrid[14].doClick();
+    	p.btnNumsInGrid[14].doClick();
+    	p.btnNumsInGrid[13].doClick();
+    	p.btnNumsInGrid[12].doClick();
+    	p.btnNumsInGrid[8].doClick();
     	
-        b = object1.getBlank(p.bNumsInGrid);
+        b = object1.getBlank(p.btnNumsInGrid);
         
         assertEquals (8, b);
         
@@ -312,9 +312,9 @@ public class UnitTest extends Puzzle  {
         
     	assertEquals(expected, result);
     	
-    	p.bNumsInGrid[9].doClick();
+    	p.btnNumsInGrid[9].doClick();
     	
-        b = object1.getBlank(p.bNumsInGrid);
+        b = object1.getBlank(p.btnNumsInGrid);
         
         assertEquals (9, b);
         
