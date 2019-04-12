@@ -6,12 +6,13 @@ This is a [15 puzzle](https://en.wikipedia.org/wiki/15_puzzle) game built as a J
 
 ## Installation
 * ### Eclipse
-In Github copy the URL of the repository by clicking on the "Clone or download" button and then the copy to clipboard button.
-In Eclipse, click on "File" and select "Import". Then expand "Git", select "Projects from Git", and click "Next".
-Choose "Clone URI" and click "Next". Now enter the URL copied from github and click "Next". Clone the master branch and click "Next".
-Select the local directory where the project should be stored and click "Next".
-Select "Import existing Eclipse projects" and click "Next". Finally select all the projects shown and click "Finish".
-You can now start Puzzle.java by clicking Run as Application.
+Markup : 
+1. In Github copy the URL of the repository by clicking on the "Clone or download" button and then the copy to clipboard button.
+2. In Eclipse, click on "File" and select "Import". Then expand "Git", select "Projects from Git", and click "Next".
+3. Choose "Clone URI" and click "Next". Now enter the URL copied from github and click "Next". Clone the master branch and click "Next".
+4. Select the local directory where the project should be stored and click "Next".
+5. Select "Import existing Eclipse projects" and click "Next". Finally select all the projects shown and click "Finish".
+6. You can now start Puzzle.java by clicking Run as Application.
 
 * ### Intellij
 
