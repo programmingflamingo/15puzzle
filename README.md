@@ -24,5 +24,4 @@ This is a [15 puzzle](https://en.wikipedia.org/wiki/15_puzzle) game built as a J
 4. Clone the remote repository using git clone "Github URL".
 5. Finally open the cloned repository by clicking on "File" and selecting "Open Folder".
 
-Open the folder you have just cloned ( File->Open Folder)
 * ### Terminal
