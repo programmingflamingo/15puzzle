@@ -6,7 +6,6 @@ This is a [15 puzzle](https://en.wikipedia.org/wiki/15_puzzle) game built as a J
 
 ## Installation
 * ### Eclipse
-Markup : 
 1. In Github copy the URL of the repository by clicking on the "Clone or download" button and then the copy to clipboard button.
 2. In Eclipse, click on "File" and select "Import". Then expand "Git", select "Projects from Git", and click "Next".
 3. Choose "Clone URI" and click "Next". Now enter the URL copied from github and click "Next". Clone the master branch and click "Next".
