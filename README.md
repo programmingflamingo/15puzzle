@@ -18,5 +18,11 @@ This is a [15 puzzle](https://en.wikipedia.org/wiki/15_puzzle) game built as a J
 * ### Atom
 
 * ### VS Code
+1. In Github copy the URL of the repository by clicking on the "Clone or download" button and then the copy to clipboard button.
+2. In VS Code open the terminal (hotkey: "Ctrl + `").
+3. Change the current directory to where the local repository should be cloned. 
+4. Clone the remote repository using git clone "Github URL".
+5. Finally open the cloned repository by clicking on "File" and selecting "Open Folder".
 
+Open the folder you have just cloned ( File->Open Folder)
 * ### Terminal
