@@ -13,6 +13,9 @@ This is a [15 puzzle](https://en.wikipedia.org/wiki/15_puzzle) game built as a J
 5. Select "Import existing Eclipse projects" and click "Next". Finally select all the projects shown and click "Finish".
 
 * ### Intellij
+1. In Github copy the URL of the repository by clicking on the "Clone or download" button and then the copy to clipboard button.
+2. In IntelliJ, click on "File", select "New", select "Project from Version Control", and click on "Git".
+3. Enter the Github URL and change the current directory to where the local repository should be cloned. Finally click "Clone". 
 
 * ### Atom
 1. In Github copy the URL of the repository by clicking on the "Clone or download" button and then the copy to clipboard button.
